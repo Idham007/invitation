@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #f5f5f5, #ffffff);
+      text-align: center;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-top: 40px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #555;
+    }
+
+    .section {
+      margin: 40px 0;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input {
+      padding: 10px;
+      margin: 5px;
+      width: 200px;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Undangan Pernikahan</h1>
+    <h2>Idham & Pasangan</h2>
+
+    <div class="section">
+      <p>Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Anda untuk hadir di acara pernikahan kami.</p>
+    </div>
+
+    <div class="section">
+      <h3>📅 Tanggal</h3>
+      <p>12 Desember 2026</p>
+
+      <h3>📍 Lokasi</h3>
+      <p>Jakarta</p>
+      <iframe src="https://maps.google.com/maps?q=jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed" width="90%" height="200" style="border:0;"></iframe>
+    </div>
+
+    <div class="section">
+      <button class="btn" onclick="showRSVP()">Konfirmasi Kehadiran</button>
+
+      <div id="rsvp" style="display:none; margin-top:20px;">
+        <input type="text" id="nama" placeholder="Nama Anda"><br>
+        <button class="btn" onclick="kirimRSVP()">Kirim</button>
+      </div>
+
+      <p id="notif"></p>
+    </div>
+
+  </div>
+
+  <footer>
+    Terima kasih atas doa dan kehadiran Anda
+  </footer>
+
+  <script>
+    function showRSVP() {
+      document.getElementById('rsvp').style.display = 'block';
+    }
+
+    function kirimRSVP() {
+      const nama = document.getElementById('nama').value;
+      if(nama === ''){
+        alert('Isi nama dulu');
+        return;
+      }
+
+      document.getElementById('notif').innerText = 'Terima kasih, ' + nama + ' sudah konfirmasi!';
+    }
+  </script>
+
+</body>
+</html>

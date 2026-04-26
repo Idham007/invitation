@@ -91,6 +91,40 @@
       background: #333;
     }
 
+    .date-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.date-day {
+  background: #000;
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.date-info {
+  text-align: left;
+}
+
+.date-label {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.date-year {
+  color: #666;
+}
+
   </style>
 </head>
 <body>
@@ -104,9 +138,13 @@
     </div>
 
     <div class="section">
-      <h3>📅 Tanggal</h3>
-      <p>09 Mei 2026</p>
-
+      <div class="date-box">
+        <div class="date-day">09</div>
+        <div class="date-info">
+        <div class="date-label">Mei</div>
+        <div class="date-year">2026</div>
+      </div>
+      </div>
       <h3>📍 Lokasi</h3>
       <p>Kota Bambu Selatan 6</p>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.589662329491!2d106.804389310824!3d-6.185631729321323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f68fbd64921f%3A0xddaafb01674007b2!2sJl.%20Kota%20Bambu%20Raya%20No.5%2C%20RT.1%2FRW.5%2C%20Kota%20Bambu%20Utara%2C%20Kec.%20Palmerah%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2011420%2C%20Indonesia!5e0!3m2!1sid!2sus!4v1777193617474!5m2!1sid!2sus" width="90%" height="200" style="border:0;"></iframe>

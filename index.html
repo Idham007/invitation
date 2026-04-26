@@ -51,6 +51,46 @@
       font-size: 0.9em;
       color: #777;
     }
+
+    /* ===== SEND GIFT CSS ===== */
+    .gift-box {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      border: 1px solid #eee;
+    }
+
+    .gift-title {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+
+    .gift-item {
+      background: #fafafa;
+      border: 1px dashed #ccc;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 10px 0;
+    }
+
+    .copy-btn {
+      margin-top: 8px;
+      padding: 6px 12px;
+      font-size: 0.8em;
+      border: none;
+      background: #000;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      background: #333;
+    }
+
   </style>
 </head>
 <body>
@@ -70,6 +110,26 @@
       <h3>📍 Lokasi</h3>
       <p>Kota Bambu Selatan 6</p>
       <iframe src="https://maps.google.com/maps?q=jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed" width="90%" height="200" style="border:0;"></iframe>
+    </div>
+
+    <!-- SEND GIFT SECTION -->
+    <div class="section">
+      <div class="gift-box">
+        <div class="gift-title">🎁 Kirim Hadiah</div>
+        <p>Tanpa mengurangi rasa hormat, bagi yang ingin memberikan tanda kasih:</p>
+
+        <div class="gift-item">
+          <b>BCA</b><br>
+          1234567890 a.n Nama Anda<br>
+          <button class="copy-btn" onclick="copyText('1234567890')">Copy</button>
+        </div>
+
+        <div class="gift-item">
+          <b>DANA</b><br>
+          08123456789<br>
+          <button class="copy-btn" onclick="copyText('08123456789')">Copy</button>
+        </div>
+      </div>
     </div>
 
     <div class="section">
@@ -102,6 +162,11 @@
       }
 
       document.getElementById('notif').innerText = 'Terima kasih, ' + nama + ' sudah konfirmasi!';
+    }
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text);
+      alert('Berhasil disalin: ' + text);
     }
   </script>
 
